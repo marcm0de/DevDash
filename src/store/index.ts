@@ -51,6 +51,10 @@ interface DashState {
   // User
   userName: string;
   setUserName: (n: string) => void;
+
+  // Focus Mode
+  focusMode: boolean;
+  toggleFocusMode: () => void;
 }
 
 const uid = () => Math.random().toString(36).slice(2, 10);
@@ -97,6 +101,9 @@ export const useDashStore = create<DashState>()(
 
       userName: "Marcus",
       setUserName: (n) => set({ userName: n }),
+
+      focusMode: false,
+      toggleFocusMode: () => set((s) => ({ focusMode: !s.focusMode })),
     }),
     { name: "devdash-store" }
   )
