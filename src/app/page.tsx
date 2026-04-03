@@ -9,6 +9,7 @@ import Todos from "@/components/Todos";
 import GitHubFeed from "@/components/GitHubFeed";
 import KeyboardShortcuts from "@/components/KeyboardShortcuts";
 import WeatherWidget from "@/components/WeatherWidget";
+import PomodoroWidget from "@/components/PomodoroWidget";
 import FocusModeToggle from "@/components/FocusMode";
 import SettingsPanel from "@/components/SettingsPanel";
 import { useDashStore } from "@/store";
@@ -55,9 +56,14 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Weather */}
-          <section className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in max-w-sm">
-            <WeatherWidget />
+          {/* Bottom row: Weather + Pomodoro */}
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+              <WeatherWidget />
+            </div>
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+              <PomodoroWidget />
+            </div>
           </section>
         </>
       )}
