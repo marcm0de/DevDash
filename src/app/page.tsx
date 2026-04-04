@@ -39,29 +39,29 @@ export default function Home() {
       ) : (
         <>
           {/* Quick Links */}
-          <section className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+          <section className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 animate-fade-in shadow-lg shadow-black/20 hover:border-[var(--accent-dim)] transition-colors duration-300">
             <QuickLinks />
           </section>
 
           {/* Main Grid: Todos | Notepad | GitHub Feed */}
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+          <section className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 animate-fade-in shadow-lg shadow-black/20 hover:border-[var(--accent-dim)] hover:shadow-xl hover:shadow-green-900/10 transition-all duration-300">
               <Todos />
             </div>
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 animate-fade-in shadow-lg shadow-black/20 hover:border-[var(--accent-dim)] hover:shadow-xl hover:shadow-green-900/10 transition-all duration-300">
               <Notepad />
             </div>
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 animate-fade-in shadow-lg shadow-black/20 hover:border-[var(--accent-dim)] hover:shadow-xl hover:shadow-green-900/10 transition-all duration-300">
               <GitHubFeed />
             </div>
           </section>
 
           {/* Bottom row: Weather + Pomodoro */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+          <section className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 animate-fade-in shadow-lg shadow-black/20 hover:border-[var(--accent-dim)] hover:shadow-xl hover:shadow-green-900/10 transition-all duration-300">
               <WeatherWidget />
             </div>
-            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 animate-fade-in">
+            <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-5 animate-fade-in shadow-lg shadow-black/20 hover:border-[var(--accent-dim)] hover:shadow-xl hover:shadow-green-900/10 transition-all duration-300">
               <PomodoroWidget />
             </div>
           </section>

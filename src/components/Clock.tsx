@@ -17,14 +17,14 @@ export default function Clock() {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
   return (
-    <div className="flex flex-col items-center justify-center py-2">
-      <time className="text-5xl font-bold tracking-tight text-[var(--accent)] tabular-nums">
+    <div className="flex flex-col items-center justify-center py-6">
+      <time className="text-7xl font-extrabold tracking-tighter text-[var(--accent)] tabular-nums drop-shadow-[0_0_24px_rgba(34,197,94,0.35)]">
         {format(now, "HH:mm:ss")}
       </time>
-      <p className="mt-2 text-sm text-[var(--text-muted)]">
+      <p className="mt-3 text-base font-medium text-[var(--text-muted)]">
         {format(now, "EEEE, MMMM d, yyyy")}
       </p>
-      <p className="text-xs text-[var(--text-muted)] opacity-60">{tz}</p>
+      <p className="mt-1 text-xs text-[var(--text-muted)] opacity-50 tracking-wider uppercase">{tz}</p>
     </div>
   );
 }
